@@ -495,4 +495,11 @@ bool Curl_quic_data_pending(const struct Curl_easy *data)
   return stream->recv_header_len || stream->recv_data_len;
 }
 
+CURLcode Curl_quic_idle(struct Curl_easy *data)
+{
+  (void)data;
+  H3BUGF(infof(data, "Curl_quic_idle"));
+  return CURLE_OK;
+}
+
 #endif /* USE_MSH3 */

@@ -856,4 +856,10 @@ bool Curl_quic_data_pending(const struct Curl_easy *data)
   return FALSE;
 }
 
+CURLcode Curl_quic_idle(struct Curl_easy *data)
+{
+  (void)data;
+  return CURLE_OK;
+}
+
 #endif
